@@ -7,7 +7,7 @@ Oppsettet er laget for bruk i et lukket, lokalt nettverk.
 
 ##  Krav
 - PC med **TrueNAS SCALE**
-- Router som lager et privat nettverk
+- Router som lager et privat nettverk f.eks "ITK_CLOUD"
 - Enheter koblet til samme Wi-Fi
 - Nettleser (Chrome, Edge, Firefox)
 
@@ -19,7 +19,7 @@ Oppsettet er laget for bruk i et lukket, lokalt nettverk.
 - TrueNAS-serveren har privat IP-adresse:
 
 
-# 192.168.1.165
+# ITK_CLOUD
 Kun enheter på dette nettverket har tilgang.
 
 ---
@@ -48,7 +48,7 @@ Applikasjonen har tilgang til datasetet som lagringsplass.
 2. Åpne nettleser
 3. Gå til:
 
-# http://192.168.1.165:<port>
+# 192.168.1.165:<port>
 
 
 Nettsiden fungerer som en lokal “Google Drive”.

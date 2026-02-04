@@ -1,4 +1,4 @@
-# TrueNAS
+# DIY Cloud storage on a budget
 
 Dette prosjektet går ut på å lage en enkel, egen “Google Drive”-lignende løsning ved hjelp av en lokal server.
 Målet er å vise hvordan skylagring fungerer i praksis, men uten å bruke kommersielle tjenester som Google Drive eller OneDrive.

@@ -10,25 +10,25 @@ Målet er å vise hvordan skylagring fungerer i praksis, men uten å bruke komme
 - Dataset i TrueNAS – der filene lagres
 
 2. ## Hvordan systemet fungere
-Serveren kjører på et privat nettverk (192.168.x.x)
-Kun enheter som er koblet til routerens Wi-Fi kan få tilgang
-Brukeren åpner en nettside i nettleseren
-Filer kan lastes opp, lagres og lastes ned igjen fra serveren
-Systemet fungerer som en lokal skylagring.
+- Serveren kjører på et privat nettverk (192.168.x.x)
+- Kun enheter som er koblet til routerens Wi-Fi kan få tilgang
+- Brukeren åpner en nettside i nettleseren
+- Filer kan lastes opp, lagres og lastes ned igjen fra serveren
+- Systemet fungerer som en lokal skylagring.
 
 3. ## Sikkerhet og nettverk
-Serveren er ikke tilgjengelig fra internett
-Den er beskyttet bak NAT og privat IP-adresse
-Dette er valgt for å gjøre løsningen trygg og egnet for skolebruk
+- Serveren er ikke tilgjengelig fra internett
+- Den er beskyttet bak NAT og privat IP-adresse
+- Dette er valgt for å gjøre løsningen trygg og egnet for skolebruk
 
 4. ## Offentlig tilgang (senere mulighet)
-Prosjektet er bygget slik at det kan gjøres offentlig senere, for eksempel:
-Ved å bruke et domene
-Ved å bruke en sikker tunnel (f.eks. Cloudflare Tunnel)
-Dette er ikke aktivert nå, men arkitekturen støtter det.
+- Prosjektet er bygget slik at det kan gjøres offentlig senere, for eksempel:
+- Ved å bruke et domene
+- Ved å bruke en sikker tunnel (f.eks. Cloudflare Tunnel)
+- Dette er ikke aktivert nå, men arkitekturen støtter det.
 
 5. ## Hva vi viser med proskjektet
-Hvordan en skylagring er bygget opp
-Samspill mellom server, nettverk og web-grensesnitt
-Grunnleggende forståelse av private og offentlige nettverk
-Praktisk bruk av TrueNAS som lagringsplattform
+- Hvordan en skylagring er bygget opp
+- Samspill mellom server, nettverk og web-grensesnitt
+- Grunnleggende forståelse av private og offentlige nettverk
+- Praktisk bruk av TrueNAS som lagringsplattform

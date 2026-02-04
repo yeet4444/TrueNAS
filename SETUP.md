@@ -6,7 +6,7 @@ Oppsettet er laget for bruk i et lukket, lokalt nettverk.
 ---
 
 ##  Krav
-- PC med **TrueNAS SCALE**
+- PC med **TrueNAS CORE**
 - Router som lager et privat nettverk f.eks "ITK_CLOUD"
 - Enheter koblet til samme Wi-Fi
 - Nettleser (Chrome, Edge, Firefox)

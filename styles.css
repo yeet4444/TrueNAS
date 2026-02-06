@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #111;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0 0 6px 0;
+  font-size: 26px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #555;
+}
+
+/* Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+/* Inputs */
+label {
+  font-size: 13px;
+  color: #333;
+}
+
+input[type="file"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* File header */
+.filesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.status {
+  color: #555;
+  font-size: 13px;
+}
+
+/* File list */
+#fileList {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.fileItem a {
+  color: #111;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileItem a:hover {
+  text-decoration: underline;
+}
+
+/* Empty message */
+.empty {
+  margin-top: 10px;
+  color: #555;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

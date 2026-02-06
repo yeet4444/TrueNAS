@@ -41,6 +41,22 @@ app.get("/download/:name", (req, res) => {
   res.download(filePath);
 });
 
+// Delete endpoint
+app.delete("/delete/:name", (req, res) => {
+  const filePath = path.join(uploadFolder, req.params.name);
+
+  // Safety checks
+  if (!filePath.startsWith(uploadFolder)) return res.status(400).send("Bad request");
+  if (!fs.existsSync(filePath)) return res.status(404).send("Not found");
+
+  fs.unlink(filePath, (err) => {
+    if (err) return res.status(500).send("Could not delete");
+    res.json({ ok: true });
+  });
+});
+
+
+
 // Start server
 app.listen(3000, "0.0.0.0", () => {
   console.log("Drive kjører på port 3000");

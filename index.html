@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skyer På Nett</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>Skyer På Nett</h1>
+    <p class="subtitle">Last opp og last ned filer</p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Last opp</h2>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required />
+        <button type="submit">Last opp</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="filesHeader">
+        <h2>Filer</h2>
+        <span id="status" class="status">Henter…</span>
+      </div>
+
+      <p id="empty" style="display:none;">Ingen filer funnet.</p>
+      <ul id="fileList"></ul>
+    </section>
+  </main>
+
+  <script>
+    const statusEl = document.getElementById("status");
+    const listEl = document.getElementById("fileList");
+    const emptyEl = document.getElementById("empty");
+
+    fetch("/files")
+      .then(res => res.json())
+      .then(files => {
+        listEl.innerHTML = "";
+
+        if (!Array.isArray(files) || files.length === 0) {
+          statusEl.textContent = "0 filer";
+          emptyEl.style.display = "block";
+          return;
+        }
+
+        emptyEl.style.display = "none";
+        statusEl.textContent = `${files.length} filer`;
+
+        files.forEach(file => {
+          const li = document.createElement("li");
+          li.className = "fileItem";
+
+          const a = document.createElement("a");
+          a.href = "/download/" + encodeURIComponent(file);
+          a.textContent = file;
+
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = "Slett";
+          btn.addEventListener("click", () => {
+            fetch("/delete/" + encodeURIComponent(file), { method: "DELETE" })
+              .then(() => location.reload());
+          });
+
+          li.appendChild(a);
+          li.appendChild(btn);
+          listEl.appendChild(li);
+        });
+      })
+      .catch(() => {
+        statusEl.textContent = "Feil";
+        listEl.innerHTML = "";
+        emptyEl.style.display = "block";
+        emptyEl.textContent = "Kunne ikke hente filer. Sjekk at /files fungerer.";
+      });
+  </script>
+</body>
+</html>

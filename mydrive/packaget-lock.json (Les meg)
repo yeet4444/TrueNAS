@@ -1,0 +1,16 @@
+Du installerer ikke package-lock.json manuelt.
+Den blir automatisk opprettet når du installerer pakkene til prosjektet.
+
+Slik gjør du det:
+
+Gå til prosjektmappen og kjør:
+
+npm install
+
+
+Dette gjør tre ting:
+Laster ned alle dependencies 
+Lager node_modules 
+Oppretter package-lock.json automatisk
+
+Viktig: Ikke rediger package-lock.json — la npm håndtere den. 
